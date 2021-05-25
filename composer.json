@@ -1,0 +1,41 @@
+{
+    "name": "pharaonic/laravel-hijri",
+    "description": "Laravel - Hijri DateTime (Islamic)",
+    "keywords": [
+        "hijri",
+        "islamic",
+        "laravel hijri",
+        "laravel islamic",
+        "php hijri",
+        "php islamic"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Moamen Eltouny",
+            "email": "support@raggitech.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "laravel/framework": ">=6.0",
+        "pharaonic/php-hijri": "*"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pharaonic\\Laravel\\Hijri\\HijriServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Pharaonic\\Laravel\\Hijri\\": "src"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
