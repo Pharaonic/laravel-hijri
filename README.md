@@ -7,8 +7,8 @@
   <a href="https://liberapay.com/Pharaonic" target="_blank"><img src="https://img.shields.io/liberapay/receives/Pharaonic?color=gold&label=Support&style=flat-square" alt="Support"></a>
   <br>
   <a href="https://github.com/Pharaonic/laravel-hijri" target="_blank"><img src="https://img.shields.io/static/v1?label=Packagist&message=pharaonic/laravel-hijri&color=blue&logo=packagist&logoColor=white" alt="Source"></a>
-  <a href="https://packagist.org/packages/pharaonic/laravel-hijri" target="_blank"><img src="https://poser.pugx.org/pharaonic/laravel-auditable/v" alt="Packagist Version"></a>
-  <a href="https://packagist.org/packages/pharaonic/laravel-hijri" target="_blank"><img src="https://poser.pugx.org/pharaonic/laravel-auditable/downloads" alt="Packagist Downloads"></a>
+  <a href="https://packagist.org/packages/pharaonic/laravel-hijri" target="_blank"><img src="https://poser.pugx.org/pharaonic/laravel-hijri/v" alt="Packagist Version"></a>
+  <a href="https://packagist.org/packages/pharaonic/laravel-hijri" target="_blank"><img src="https://poser.pugx.org/pharaonic/laravel-hijri/downloads" alt="Packagist Downloads"></a>
 </p>
 
 <h3 align="center">Hijri DateTime (Islamic) for Laravel.</h3>
