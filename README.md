@@ -17,7 +17,7 @@
 
 ## Documentation
 
-You can find the detailed documentation here in [Larave Hijri Documentation](https://pharaonic.io/package/2-laravel/8-hijri).
+You can find the detailed documentation here in [Laravel Hijri Documentation](https://pharaonic.io/package/2-laravel/8-hijri).
 
 ## Contributing
 
