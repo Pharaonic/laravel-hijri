@@ -19,7 +19,7 @@
     "require": {
         "php": "^8.0",
         "laravel/framework": "^11.0",
-        "pharaonic/php-hijri": "*"
+        "pharaonic/php-hijri": ">=1.1.0"
     },
     "config": {
         "sort-packages": true
