@@ -13,13 +13,13 @@
     "authors": [
         {
             "name": "Moamen Eltouny (Raggi)",
-            "email": "raggi@raggitech.com"
+            "email": "raggigroup@gmail.com"
         }
     ],
     "require": {
-        "php": "^8.0",
-        "laravel/framework": "^11.0",
-        "pharaonic/php-hijri": ">=1.1.0"
+        "php": ">=8.0",
+        "laravel/framework": ">=9.0",
+        "pharaonic/php-hijri": ">=2.0.0"
     },
     "config": {
         "sort-packages": true
