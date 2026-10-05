@@ -1,14 +1,16 @@
 {
     "name": "pharaonic/laravel-hijri",
-    "description": "Laravel - Hijri DateTime (Islamic)",
+    "description": "Hijri DateTime integration for Laravel, powered by Pharaonic PHP Hijri.",
     "keywords": [
         "hijri",
         "islamic",
+        "calendar",
+        "laravel",
+        "carbon",
         "laravel hijri",
-        "laravel islamic",
-        "php hijri",
-        "php islamic"
+        "php hijri"
     ],
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
@@ -16,13 +18,32 @@
             "email": "raggigroup@gmail.com"
         }
     ],
-    "require": {
-        "php": ">=8.0",
-        "laravel/framework": ">=9.0",
-        "pharaonic/php-hijri": ">=2.0.0"
+    "support": {
+        "issues": "https://github.com/Pharaonic/laravel-hijri/issues",
+        "source": "https://github.com/Pharaonic/laravel-hijri"
     },
-    "config": {
-        "sort-packages": true
+    "require": {
+        "php": ">=8.0 <8.1",
+        "illuminate/contracts": "^6.20",
+        "illuminate/database": "^6.20",
+        "illuminate/support": "^6.20",
+        "pharaonic/php-hijri": "^8.0.1"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "orchestra/testbench": "^4.18",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^9.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pharaonic\\Laravel\\Hijri\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pharaonic\\Laravel\\Hijri\\Tests\\": "tests/"
+        }
     },
     "extra": {
         "laravel": {
@@ -31,11 +52,29 @@
             ]
         }
     },
-    "autoload": {
-        "psr-4": {
-            "Pharaonic\\Laravel\\Hijri\\": "src"
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan analyse --no-progress",
+        "style": "pint --test",
+        "format": "pint",
+        "check": [
+            "@style",
+            "@analyse",
+            "@test"
+        ]
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        },
+        "platform": {
+            "php": "8.0.30"
+        },
+        "audit": {
+            "block-insecure": false
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true
 }
