@@ -71,11 +71,6 @@ Validate the Hijri input, then store it as a Gregorian date so your queries keep
 
   class StoreBookingRequest extends FormRequest
   {
-      public function authorize()
-      {
-          return true;
-      }
-
       public function rules()
       {
           return [
@@ -124,31 +119,36 @@ Validate the Hijri input, then store it as a Gregorian date so your queries keep
   </form>
   ```
 
-### 3. Ramadan Banner
+### 3. Zakat Due Date
 
-Show a banner during Ramadan (month 9) and hide it the rest of the year.
+Zakat is due one full Hijri year (hawl) after savings reach the nisab. A Hijri year is about 11 days shorter than a Gregorian one, so adding `->addYear()` gives the wrong date. Add the year in Hijri, then convert back.
 
-```php title="app/Http/View/Composers/RamadanComposer.php"
-namespace App\Http\View\Composers;
+```php title="app/Account.php"
+namespace App;
 
-use Illuminate\View\View;
+use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Model;
 
-class RamadanComposer
+class Account extends Model
 {
-    public function compose(View $view)
-    {
-        $today = now()->toHijri();
+    protected $dates = ['nisab_reached_at'];
 
-        $view->with('isRamadan', $today->month === 9);
-        $view->with('ramadanDay', $today->day);
+    public function getZakatDueAtAttribute(): Carbon
+    {
+        $start = $this->nisab_reached_at->toHijri(); // 2024-03-11 → 1445-09-01
+
+        // Hijri months have 29 or 30 days, so cap the day to stay valid.
+        return Carbon::fromHijri($start->year + 1, $start->month, min($start->day, 29)); // → 2025-03-01
     }
 }
 ```
 
-```blade title="resources/views/layouts/app.blade.php"
-@if ($isRamadan)
-    <div class="banner">Ramadan Kareem! Day {{ $ramadanDay }} of Ramadan.</div>
-@endif
+```blade title="resources/views/accounts/show.blade.php"
+<p>
+    Zakat due on {{ $account->zakat_due_at->format('j F Y') }}
+    (@hijri($account->zakat_due_at, 'D MMMM YYYY')),
+    in {{ now()->diffInDays($account->zakat_due_at) }} days.
+</p>
 ```
 
 ### 4. Find the Gregorian Date of an Occasion
