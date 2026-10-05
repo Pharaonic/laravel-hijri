@@ -1,0 +1,54 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - 6.x
+  pull_request:
+    branches:
+      - 6.x
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: PHP ${{ matrix.php }} - ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+
+      matrix:
+        php:
+          - "8.0"
+        os:
+          - ubuntu-latest
+          - windows-latest
+          - macos-latest
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
+          tools: composer:v2
+
+      - name: Install dependencies
+        run: composer install --no-interaction --prefer-dist --no-progress
+
+      - name: Check style
+        if: matrix.os == 'ubuntu-latest'
+        run: composer style
+
+      - name: Static analysis
+        if: matrix.os == 'ubuntu-latest'
+        run: composer analyse
+
+      - name: Run tests
+        run: composer test
