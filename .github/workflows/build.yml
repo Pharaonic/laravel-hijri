@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - 10.x
+
   pull_request:
     branches:
       - 10.x
@@ -23,14 +24,16 @@ jobs:
           - "8.1"
           - "8.2"
           - "8.3"
+
         dependencies:
           - lowest
           - highest
-        os:
-          - pharaonic-linux-runner
-          - pharaonic-windows-runner
 
-    runs-on: ${{ matrix.os }}
+        os:
+          - Linux
+          - Windows
+
+    runs-on: [self-hosted, pharaonic-hosted, ${{ matrix.os }}]
 
     steps:
       - name: Checkout
@@ -50,11 +53,11 @@ jobs:
           dependency-versions: ${{ matrix.dependencies }}
 
       - name: Check style
-        if: matrix.os == 'pharaonic-linux-runner' && matrix.php == '8.1' && matrix.dependencies == 'highest'
+        if: matrix.os == 'Linux' && matrix.php == '8.1' && matrix.dependencies == 'highest'
         run: composer style
 
       - name: Static analysis
-        if: matrix.os == 'pharaonic-linux-runner' && matrix.php == '8.1' && matrix.dependencies == 'highest'
+        if: matrix.os == 'Linux' && matrix.php == '8.1' && matrix.dependencies == 'highest'
         run: composer analyse
 
       - name: Run tests
