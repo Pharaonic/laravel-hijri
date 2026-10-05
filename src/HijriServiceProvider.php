@@ -42,7 +42,7 @@ class HijriServiceProvider extends ServiceProvider
             ], ['pharaonic', 'laravel-hijri', 'pharaonic-config', 'hijri-config']);
 
             $this->publishes([
-                __DIR__.'/../resources/lang' => $this->app->resourcePath('lang/vendor/hijri'),
+                __DIR__.'/../resources/lang' => lang_path('vendor/hijri'),
             ], ['pharaonic', 'laravel-hijri', 'pharaonic-translations', 'hijri-translations']);
         }
     }

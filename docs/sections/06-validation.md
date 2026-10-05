@@ -32,7 +32,7 @@ The message comes from the `hijri::validation.hijri_date` translation key:
 | `en` | The :attribute must be a valid Hijri date. |
 | `ar` | يجب أن يكون حقل :attribute تاريخًا هجريًا صالحًا. |
 
-To change the wording, publish the translations (`--tag=hijri-translations`) and edit `resources/lang/vendor/hijri/{locale}/validation.php`. See [Localization](#localization).
+To change the wording, publish the translations (`--tag=hijri-translations`) and edit `lang/vendor/hijri/{locale}/validation.php`. See [Localization](#localization).
 
 :::info Nullable Fields
 The rule fails on an empty value. For optional fields, add `nullable` so Laravel skips the rule when the field is empty: `['nullable', new HijriDateRule()]`.

@@ -4,9 +4,9 @@ Install the package with Composer. Laravel discovers the service provider automa
 
 ### Requirements
 
-- PHP 8.0 or 8.1
-- Laravel 8.75 or newer within 8.x
-- `pharaonic/php-hijri` 8.0.2+ on PHP 8.0 or 8.1.1+ on PHP 8.1, with `nesbot/carbon` ^2.55 (both installed automatically)
+- PHP 8.0, 8.1 or 8.2
+- Laravel 9.x
+- `pharaonic/php-hijri` 8.0.2+ on PHP 8.0, 8.1.1+ on PHP 8.1 or 8.2.1+ on PHP 8.2, with a compatible `nesbot/carbon` (both installed automatically)
 
 ### Composer Installation
 
@@ -32,7 +32,7 @@ Publish the validation messages only if you want to change them or add a languag
 php artisan vendor:publish --tag=hijri-translations
 ```
 
-The files are copied to `resources/lang/vendor/hijri`.
+The files are copied to `lang/vendor/hijri`.
 
 :::info Publish Tags
 `--tag=laravel-hijri` (or `--tag=pharaonic`) publishes the config and the translations together. `pharaonic-config` and `pharaonic-translations` are also available.

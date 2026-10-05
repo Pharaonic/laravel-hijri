@@ -38,4 +38,4 @@ $date->copy()->addDays(30)->toHijri();
 
 ### The validation message shows `hijri::validation.hijri_date`
 
-The translation wasn't found for the current locale. The package ships `en` and `ar`. For other locales, publish the translations with `--tag=hijri-translations` and add `resources/lang/vendor/hijri/{locale}/validation.php`, or set a `fallback_locale` of `en`.
+The translation wasn't found for the current locale. The package ships `en` and `ar`. For other locales, publish the translations with `--tag=hijri-translations` and add `lang/vendor/hijri/{locale}/validation.php`, or set a `fallback_locale` of `en`.

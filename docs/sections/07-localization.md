@@ -42,7 +42,7 @@ php artisan vendor:publish --tag=hijri-translations
 
 Then add a folder for your locale with the same key:
 
-```php title="resources/lang/vendor/hijri/fr/validation.php"
+```php title="lang/vendor/hijri/fr/validation.php"
 return [
     'hijri_date' => 'Le champ :attribute doit être une date hégirienne valide.',
 ];
