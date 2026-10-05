@@ -16,8 +16,6 @@ jobs:
     name: PHP ${{ matrix.php }} - ${{ matrix.os }} - ${{ matrix.dependencies }}
 
     strategy:
-      max-parallel: 3
-      
       fail-fast: false
 
       matrix:
@@ -29,9 +27,8 @@ jobs:
           - lowest
           - highest
         os:
-          - ubuntu-latest
-          - windows-latest
-          - macos-latest
+          - pharaonic-linux-runner
+          - pharaonic-windows-runner
 
     runs-on: ${{ matrix.os }}
 
@@ -53,11 +50,11 @@ jobs:
           dependency-versions: ${{ matrix.dependencies }}
 
       - name: Check style
-        if: matrix.os == 'ubuntu-latest' && matrix.php == '8.1' && matrix.dependencies == 'highest'
+        if: matrix.os == 'pharaonic-linux-runner' && matrix.php == '8.1' && matrix.dependencies == 'highest'
         run: composer style
 
       - name: Static analysis
-        if: matrix.os == 'ubuntu-latest' && matrix.php == '8.1' && matrix.dependencies == 'highest'
+        if: matrix.os == 'pharaonic-linux-runner' && matrix.php == '8.1' && matrix.dependencies == 'highest'
         run: composer analyse
 
       - name: Run tests
