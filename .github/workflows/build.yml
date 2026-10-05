@@ -33,7 +33,7 @@ jobs:
           - Linux
           - Windows
 
-    runs-on: [self-hosted, pharaonic-hosted, ${{ matrix.os }}]
+    runs-on: [self-hosted, pharaonic-hosted, "${{ matrix.os }}"]
 
     steps:
       - name: Checkout
