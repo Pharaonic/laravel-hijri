@@ -9,8 +9,8 @@ All notable changes to this project will be documented in this file.
 - Automatic registration of the PHP Hijri Carbon mixin.
 - Publishable `hijri.php` configuration with global day adjustment.
 - `HijriDate` Laravel validation rule.
-- `HasHijriDates` Eloquent concern for non-invasive Hijri representations.
 - English and Arabic validation translations.
+- `@hijri($date, $format = null, $locale = null, $adjustment = null)` Blade directive with a configurable default `hijri.format`.
 
 ### Changed
 

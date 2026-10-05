@@ -13,4 +13,16 @@ return [
     */
 
     'adjustment' => (int) env('HIJRI_ADJUSTMENT', -1),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Default Display Format
+    |--------------------------------------------------------------------------
+    |
+    | The ISO format (Carbon isoFormat tokens) used by the @hijri Blade
+    | directive when no explicit format is passed.
+    |
+    */
+
+    'format' => 'D MMMM YYYY',
 ];

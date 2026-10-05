@@ -3,9 +3,11 @@
 namespace Pharaonic\Laravel\Hijri;
 
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Pharaonic\Hijri\Hijri;
 use Pharaonic\Hijri\HijriCarbon;
+use Pharaonic\Laravel\Hijri\Support\HijriFormatter;
 
 class HijriServiceProvider extends ServiceProvider
 {
@@ -30,9 +32,13 @@ class HijriServiceProvider extends ServiceProvider
             'hijri'
         );
 
+        Blade::directive('hijri', function ($expression) {
+            return '<?php echo e(\\'.HijriFormatter::class.'::format('.$expression.')); ?>';
+        });
+
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/hijri.php' => $this->app->configPath('Pharaonic/hijri.php'),
+                __DIR__.'/../config/hijri.php' => $this->app->configPath('pharaonic/hijri.php'),
             ], ['pharaonic', 'config', 'laravel-hijri', 'hijri-config']);
 
             $this->publishes([
