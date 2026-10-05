@@ -32,8 +32,8 @@ Use the branch matching the Laravel version you want to support.
 Example:
 
 ```bash
-git checkout 10.x
-git pull upstream 10.x
+git checkout 11.x
+git pull upstream 11.x
 ```
 
 Always start your work from the appropriate Laravel version branch.
@@ -104,7 +104,7 @@ The package must also be tested against the Laravel version targeted by the bran
 For example:
 
 ```text
-10.x → Laravel10
+11.x → Laravel 11
 ```
 
 ## Commit your changes
@@ -117,7 +117,7 @@ Examples:
 Add Hijri date adjustment support
 Fix Hijri cast conversion
 Add configurable Hijri formatter
-Update Laravel 10 compatibility
+Update Laravel 11 compatibility
 Update usage documentation
 ```
 
@@ -145,7 +145,7 @@ Example:
 ```text
 fix/invalid-date-conversion
         ↓
-       10.x
+       11.x
 ```
 
 Do not submit the pull request against another Laravel version branch.

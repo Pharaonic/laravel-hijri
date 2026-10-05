@@ -10,30 +10,34 @@
         "laravel hijri",
         "php hijri"
     ],
+    "homepage": "https://pharaonic.dev/packages/laravel/hijri",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
             "name": "Moamen Eltouny (Raggi)",
-            "email": "raggigroup@gmail.com"
+            "email": "raggigroup@gmail.com",
+            "homepage": "https://pharaonic.dev",
+            "role": "Developer"
         }
     ],
     "support": {
         "issues": "https://github.com/Pharaonic/laravel-hijri/issues",
-        "source": "https://github.com/Pharaonic/laravel-hijri"
+        "source": "https://github.com/Pharaonic/laravel-hijri",
+        "docs": "https://pharaonic.dev/packages/laravel/hijri"
     },
     "require": {
-        "php": ">=8.1 <8.4",
-        "illuminate/contracts": "^10.0",
-        "illuminate/database": "^10.0",
-        "illuminate/support": "^10.0",
-        "pharaonic/php-hijri": "~8.1.1 || ~8.2.1 || ~8.3.1"
+        "php": ">=8.2 <8.5",
+        "illuminate/contracts": "^11.0",
+        "illuminate/support": "^11.0",
+        "illuminate/view": "^11.0",
+        "pharaonic/php-hijri": "~8.2.1 || ~8.3.1 || ~8.4.1"
     },
     "require-dev": {
-        "laravel/pint": "^1.0",
-        "orchestra/testbench": "^8.0",
+        "laravel/pint": "^1.13",
+        "orchestra/testbench": "^9.0",
         "phpstan/phpstan": "^2.1",
-        "phpunit/phpunit": "^9.6"
+        "phpunit/phpunit": "^10.5 || ^11.0"
     },
     "autoload": {
         "psr-4": {
