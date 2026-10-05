@@ -4,6 +4,3 @@ parameters:
         - src
     tmpDir: .phpstan
     treatPhpDocTypesAsCertain: false
-    ignoreErrors:
-        -
-            identifier: trait.unused
