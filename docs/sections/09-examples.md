@@ -6,15 +6,15 @@ Add an accessor that returns the Hijri date, and print it next to the Gregorian 
 
 - ===Model
 
-  ```php title="app/Post.php"
-  namespace App;
+  ```php title="app/Models/Post.php"
+  namespace App\Models;
 
   use Illuminate\Database\Eloquent\Model;
   use Pharaonic\Laravel\Hijri\Support\HijriFormatter;
 
   class Post extends Model
   {
-      protected $dates = ['published_at'];
+      protected $casts = ['published_at' => 'datetime'];
 
       public function getPublishedAtHijriAttribute(): string
       {
@@ -86,8 +86,8 @@ Validate the Hijri input, then store it as a Gregorian date so your queries keep
   ```php title="app/Http/Controllers/BookingController.php"
   namespace App\Http\Controllers;
 
-  use App\Booking;
   use App\Http\Requests\StoreBookingRequest;
+  use App\Models\Booking;
   use Carbon\Carbon;
 
   class BookingController extends Controller
@@ -123,15 +123,15 @@ Validate the Hijri input, then store it as a Gregorian date so your queries keep
 
 Zakat is due one full Hijri year (hawl) after savings reach the nisab. A Hijri year is about 11 days shorter than a Gregorian one, so adding `->addYear()` gives the wrong date. Add the year in Hijri, then convert back.
 
-```php title="app/Account.php"
-namespace App;
+```php title="app/Models/Account.php"
+namespace App\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Account extends Model
 {
-    protected $dates = ['nisab_reached_at'];
+    protected $casts = ['nisab_reached_at' => 'datetime'];
 
     public function getZakatDueAtAttribute(): Carbon
     {
@@ -175,7 +175,7 @@ $daysLeft = now()->diffInDays($eidFitr);
 
 Let users pick an adjustment that matches their country's moon sighting, and pass it per call so other requests aren't affected.
 
-```php title="app/User.php"
+```php title="app/Models/User.php"
 use Pharaonic\Laravel\Hijri\Support\HijriFormatter;
 
 // Assumes `locale` and `hijri_adjustment` columns on your users table.

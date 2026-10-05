@@ -20,6 +20,7 @@ All notable changes to this project will be documented in this file.
 
 ### Compatibility
 
-- Added support for Laravel 7.x.
+- Added support for Laravel 8.x on PHP 8.0 and 8.1.
 - Uses a compatible `pharaonic/php-hijri` release as the underlying Hijri date engine.
-- Maintains compatibility with the PHP and Carbon versions supported by Laravel 7.
+- Maintains compatibility with the PHP and Carbon versions supported by Laravel 8.
+- Requires `pharaonic/php-hijri` 8.0.2+ (PHP 8.0) or 8.1.1+ (PHP 8.1), which require `nesbot/carbon` ^2.55. Older Carbon releases render Gregorian month names (e.g. `September`) in Hijri dates.

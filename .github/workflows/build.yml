@@ -3,17 +3,17 @@ name: Build
 on:
   push:
     branches:
-      - 7.x
+      - 8.x
   pull_request:
     branches:
-      - 7.x
+      - 8.x
 
 permissions:
   contents: read
 
 jobs:
   build:
-    name: PHP ${{ matrix.php }} - ${{ matrix.os }}
+    name: PHP ${{ matrix.php }} - ${{ matrix.os }} - ${{ matrix.dependencies }}
 
     strategy:
       fail-fast: false
@@ -21,6 +21,10 @@ jobs:
       matrix:
         php:
           - "8.0"
+          - "8.1"
+        dependencies:
+          - lowest
+          - highest
         os:
           - ubuntu-latest
           - windows-latest
@@ -41,14 +45,16 @@ jobs:
           tools: composer:v2
 
       - name: Install dependencies
-        run: composer install --no-interaction --prefer-dist --no-progress
+        uses: ramsey/composer-install@v3
+        with:
+          dependency-versions: ${{ matrix.dependencies }}
 
       - name: Check style
-        if: matrix.os == 'ubuntu-latest'
+        if: matrix.os == 'ubuntu-latest' && matrix.php == '8.0' && matrix.dependencies == 'highest'
         run: composer style
 
       - name: Static analysis
-        if: matrix.os == 'ubuntu-latest'
+        if: matrix.os == 'ubuntu-latest' && matrix.php == '8.0' && matrix.dependencies == 'highest'
         run: composer analyse
 
       - name: Run tests

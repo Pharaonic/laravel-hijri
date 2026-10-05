@@ -15,21 +15,21 @@ body:
     id: php
     attributes:
       label: PHP version
-      placeholder: 8.0.x
+      placeholder: 8.1.x
     validations:
       required: true
   - type: input
     id: laravel
     attributes:
       label: Laravel version
-      placeholder: 7.x
+      placeholder: 8.x
     validations:
       required: true
   - type: input
     id: package
     attributes:
       label: Laravel Hijri version
-      placeholder: 7.x.x
+      placeholder: 8.x.x
     validations:
       required: true
   - type: textarea
