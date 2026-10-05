@@ -16,6 +16,8 @@ jobs:
     name: PHP ${{ matrix.php }} - ${{ matrix.os }} - ${{ matrix.dependencies }}
 
     strategy:
+      max-parallel: 3
+      
       fail-fast: false
 
       matrix:
