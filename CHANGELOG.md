@@ -20,6 +20,6 @@ All notable changes to this project will be documented in this file.
 
 ### Compatibility
 
-- Added support for Laravel 6.x.
+- Added support for Laravel 7.x.
 - Uses a compatible `pharaonic/php-hijri` release as the underlying Hijri date engine.
-- Maintains compatibility with the PHP and Carbon versions supported by Laravel 6.
+- Maintains compatibility with the PHP and Carbon versions supported by Laravel 7.

@@ -22,14 +22,14 @@ body:
     id: laravel
     attributes:
       label: Laravel version
-      placeholder: 6.x
+      placeholder: 7.x
     validations:
       required: true
   - type: input
     id: package
     attributes:
       label: Laravel Hijri version
-      placeholder: 6.x.x
+      placeholder: 7.x.x
     validations:
       required: true
   - type: textarea

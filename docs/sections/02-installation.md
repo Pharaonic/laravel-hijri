@@ -5,7 +5,7 @@ Install the package with Composer. Laravel discovers the service provider automa
 ### Requirements
 
 - PHP 8.0
-- Laravel 6.20 or newer within 6.x
+- Laravel 7.30 or newer within 7.x
 - `pharaonic/php-hijri` ^8.0.1 (installed automatically)
 
 ### Composer Installation
