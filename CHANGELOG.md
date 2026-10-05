@@ -10,7 +10,7 @@ All notable changes to this project will be documented in this file.
 - Publishable `hijri.php` configuration with global day adjustment.
 - `HijriDate` Laravel validation rule.
 - English and Arabic validation translations.
-- `@hijri($date, $format = null, $locale = null, $adjustment = null)` Blade directive with a configurable default `hijri.format`.
+- `@hijri($date, $format = null, $locale = null, $adjustment = null)` Blade directive with a configurable default `pharaonic.hijri.format`.
 
 ### Changed
 

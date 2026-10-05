@@ -23,6 +23,6 @@ final class HijriFormatter
         $hijri = Hijri::fromGregorian($date, null, $adjustment);
         $hijri->locale($locale ?? App::getLocale());
 
-        return $hijri->isoFormat($format ?? (string) Config::get('hijri.format', 'D MMMM YYYY'));
+        return $hijri->isoFormat($format ?? (string) Config::get('pharaonic.hijri.format', 'D MMMM YYYY'));
     }
 }

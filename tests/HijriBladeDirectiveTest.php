@@ -34,7 +34,7 @@ final class HijriBladeDirectiveTest extends TestCase
     public function test_it_uses_the_configured_default_format(): void
     {
         App::setLocale('en');
-        config(['hijri.format' => 'YYYY/MM/DD']);
+        config(['pharaonic.hijri.format' => 'YYYY/MM/DD']);
 
         $this->assertSame('1445/09/01', $this->render("@hijri('2024-03-11')"));
     }
