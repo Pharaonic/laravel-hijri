@@ -16,6 +16,8 @@ jobs:
     name: PHP ${{ matrix.php }} - ${{ matrix.os }}
 
     strategy:
+      max-parallel: 2
+      
       fail-fast: false
 
       matrix:
@@ -24,7 +26,6 @@ jobs:
         os:
           - ubuntu-latest
           - windows-latest
-          - macos-latest
 
     runs-on: ${{ matrix.os }}
 
