@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Hijri Day Adjustment
@@ -14,5 +13,4 @@ return [
     */
 
     'adjustment' => (int) env('HIJRI_ADJUSTMENT', -1),
-
 ];

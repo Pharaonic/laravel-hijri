@@ -33,11 +33,11 @@ class HijriServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__.'/../config/hijri.php' => $this->app->configPath('Pharaonic/hijri.php'),
-            ], 'hijri-config');
+            ], ['pharaonic', 'config', 'laravel-hijri', 'hijri-config']);
 
             $this->publishes([
                 __DIR__.'/../resources/lang' => $this->app->resourcePath('lang/vendor/hijri'),
-            ], 'hijri-translations');
+            ], ['pharaonic', 'translations', 'laravel-hijri', 'hijri-translations']);
         }
     }
 }
