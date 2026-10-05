@@ -29,7 +29,7 @@ class HijriServiceProvider extends ServiceProvider
 
         $this->loadTranslationsFrom(
             __DIR__.'/../resources/lang',
-            'pharaonic.hijri'
+            'hijri'
         );
 
         Blade::directive('hijri', function ($expression) {
