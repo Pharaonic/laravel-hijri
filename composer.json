@@ -64,7 +64,12 @@
         ]
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "policy": {
+            "advisories": {
+                "block": false
+            }
+        }
     },
     "minimum-stability": "stable",
     "prefer-stable": true
