@@ -20,7 +20,7 @@ card:
   topic: localization
   icon: clock
   tags: hijri islamic calendar carbon date conversion arabic ramadan blade validation
-  description: Hijri (Islamic) calendar support for Laravel. Convert any Carbon date to and from Hijri, print it with an @hijri Blade directive, and validate Hijri input in English or Arabic.
+  description: Hijri dates for Laravel. Convert Carbon dates both ways, print them with @hijri, and validate Hijri input.
 
 seo:
   title: "{package.name} - Hijri (Islamic) Calendar Package for Laravel"

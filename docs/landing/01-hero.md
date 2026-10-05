@@ -27,4 +27,4 @@ labels:
   copied: Copied!
 ---
 
-Laravel Hijri teaches Carbon the Islamic calendar. Call `toHijri()` on any date in your app, turn Hijri input back into Gregorian dates you can store and query, and print `1 Ramadan 1445` or `1 رَمضان 1445` in your views with one Blade directive.
+Hijri dates in Laravel, zero setup. Call `toHijri()` on any Carbon date, convert back with `fromHijri()`, and print `1 Ramadan 1445` with `@hijri`.
