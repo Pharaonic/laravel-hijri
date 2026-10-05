@@ -31,7 +31,7 @@ Add an accessor that returns the Hijri date, and print it next to the Gregorian 
 
       <p class="meta">
           {{ $post->published_at->format('j F Y') }}
-          · @hijri($post->published_at, 'dddd D MMMM YYYY')
+          · <x-hijri-date :date="$post->published_at" format="dddd D MMMM YYYY" />
       </p>
   </article>
   ```

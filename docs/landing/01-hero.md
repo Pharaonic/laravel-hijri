@@ -27,4 +27,4 @@ labels:
   copied: Copied!
 ---
 
-Hijri dates in Laravel, zero setup. Call `toHijri()` on any Carbon date, convert back with `fromHijri()`, and print `1 Ramadan 1445` with `@hijri`.
+Hijri dates in Laravel, zero setup. Call `toHijri()` on any Carbon date, convert back with `fromHijri()`, and print `1 Ramadan 1445` with `@hijri` or `<x-hijri-date>`.

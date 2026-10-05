@@ -9,4 +9,4 @@ buttons:
     icon: arrow-right
 ---
 
-Read the full documentation for installation, the day adjustment config, Carbon conversion methods, the `@hijri` Blade directive, Hijri date validation, Arabic and English localization, and real-world examples.
+Read the full documentation for installation, the day adjustment config, Carbon conversion methods, the `@hijri` Blade directive and `<x-hijri-date>` component, Hijri date validation, Arabic and English localization, and real-world examples.

@@ -31,11 +31,12 @@ Added to `Carbon\Carbon` (and so to `Illuminate\Support\Carbon`) by the `Pharaon
 
 | Class / Member | Description | Returns |
 | --- | --- | --- |
-| `HijriFormatter::format($date, ?string $format = null, ?string $locale = null, ?int $adjustment = null)` | Formats a Gregorian `DateTimeInterface` or string as Hijri. Returns `''` for `null` or `''`. Used by `@hijri`. | `string` |
+| `HijriFormatter::format($date, ?string $format = null, ?string $locale = null, ?int $adjustment = null)` | Formats a Gregorian `DateTimeInterface` or string as Hijri. Returns `''` for `null` or `''`. Used by `@hijri` and `<x-hijri-date>`. | `string` |
 | `new HijriDateRule()` | Validation rule for Hijri `YYYY-MM-DD[ HH:MM[:SS]]` strings. | `Illuminate\Contracts\Validation\Rule` |
 | `@hijri($date, $format, $locale, $adjustment)` | Blade directive that echoes `HijriFormatter::format()`, escaped. | Output |
+| `<x-hijri-date :date format locale adjustment />` | Blade component that renders `HijriFormatter::format()` inside `<time datetime="Y-m-d">`. Extra attributes go on the `<time>` element. | Output |
 
-Namespaces: `Pharaonic\Laravel\Hijri\Support\HijriFormatter`, `Pharaonic\Laravel\Hijri\Rules\HijriDateRule`, `Pharaonic\Hijri\Hijri`, `Pharaonic\Hijri\Exception\InvalidHijriDateException`.
+Namespaces: `Pharaonic\Laravel\Hijri\Support\HijriFormatter`, `Pharaonic\Laravel\Hijri\View\Components\HijriDate`, `Pharaonic\Laravel\Hijri\Rules\HijriDateRule`, `Pharaonic\Hijri\Hijri`, `Pharaonic\Hijri\Exception\InvalidHijriDateException`.
 
 ### Config and Publish Tags
 

@@ -32,7 +32,7 @@ No. Store dates as Gregorian, so sorting, queries and date math keep working, an
 
 ## How do I show Arabic month names?
 
-Set the locale to Arabic: `$date->toHijri()->locale('ar')`. The `@hijri` Blade directive follows your app locale, or accepts a locale as its third argument.
+Set the locale to Arabic: `$date->toHijri()->locale('ar')`. The `@hijri` directive and `<x-hijri-date>` component follow your app locale, or take a locale: `@hijri($date, null, 'ar')` or `<x-hijri-date :date="$date" locale="ar" />`.
 
 ## How do I validate a Hijri date from a form?
 

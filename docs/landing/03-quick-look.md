@@ -15,6 +15,6 @@ code: |
 
       $eid = Carbon::fromHijri($hijri->year, 10, 1);   // Gregorian Carbon date
 
-      return view('today', compact('eid'));            // @hijri($eid) in the view
+      return view('today', compact('eid'));            // <x-hijri-date :date="$eid" />
   });
 ---

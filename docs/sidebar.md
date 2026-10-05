@@ -5,6 +5,7 @@
 - Usage
   - [Basic Usage](#basic-usage)
   - [Blade Directive](#blade-directive)
+  - [Blade Component](#blade-component)
   - [Validation](#validation)
   - [Localization](#localization)
 - API Reference

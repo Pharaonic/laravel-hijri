@@ -1,6 +1,6 @@
 ## Blade Directive
 
-`@hijri` prints a Gregorian date as an escaped Hijri string.
+`@hijri` prints a Gregorian date as an escaped Hijri string. To wrap the date in a `<time>` element, use the [`<x-hijri-date>` component](#blade-component).
 
 ```blade
 @hijri($date, $format = null, $locale = null, $adjustment = null)

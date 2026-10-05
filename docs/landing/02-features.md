@@ -12,8 +12,8 @@ items:
     title: Hijri to Gregorian
     text: "`Carbon::fromHijri()` and `Carbon::parseHijri()` give you a Gregorian date to store."
   - icon: code
-    title: Blade Directive
-    text: "`@hijri($date)` prints a localized Hijri date in your default format."
+    title: Blade Directive & Component
+    text: "`@hijri($date)` or `<x-hijri-date :date=\"$date\" />` prints a localized Hijri date."
   - icon: shield-check
     title: Validation Rule
     text: "`HijriDateRule` rejects impossible dates like `1445-02-30`, with English and Arabic messages."

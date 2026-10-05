@@ -53,7 +53,7 @@ $hijri->locale('en')->isoFormat('dddd D MMMM YYYY'); // "Monday 1 Ramadan 1445"
 $hijri->locale('ar')->isoFormat('dddd D MMMM YYYY'); // "الاثنين 1 رَمضان 1445"
 ```
 
-In Blade views, the [`@hijri` directive](#blade-directive) does this in one step.
+In Blade views, the [`@hijri` directive](#blade-directive) or the [`<x-hijri-date>` component](#blade-component) does this in one step.
 
 ### Per-call Adjustment
 
