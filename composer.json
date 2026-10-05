@@ -64,16 +64,7 @@
         ]
     },
     "config": {
-        "sort-packages": true,
-        "allow-plugins": {
-            "pestphp/pest-plugin": true
-        },
-        "platform": {
-            "php": "8.0.30"
-        },
-        "audit": {
-            "block-insecure": false
-        }
+        "sort-packages": true
     },
     "minimum-stability": "stable",
     "prefer-stable": true
