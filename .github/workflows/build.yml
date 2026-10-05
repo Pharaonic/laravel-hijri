@@ -3,10 +3,10 @@ name: Build
 on:
   push:
     branches:
-      - 9.x
+      - 10.x
   pull_request:
     branches:
-      - 9.x
+      - 10.x
 
 permissions:
   contents: read
@@ -20,9 +20,9 @@ jobs:
 
       matrix:
         php:
-          - "8.0"
           - "8.1"
           - "8.2"
+          - "8.3"
         dependencies:
           - lowest
           - highest
@@ -51,11 +51,11 @@ jobs:
           dependency-versions: ${{ matrix.dependencies }}
 
       - name: Check style
-        if: matrix.os == 'ubuntu-latest' && matrix.php == '8.0' && matrix.dependencies == 'highest'
+        if: matrix.os == 'ubuntu-latest' && matrix.php == '8.1' && matrix.dependencies == 'highest'
         run: composer style
 
       - name: Static analysis
-        if: matrix.os == 'ubuntu-latest' && matrix.php == '8.0' && matrix.dependencies == 'highest'
+        if: matrix.os == 'ubuntu-latest' && matrix.php == '8.1' && matrix.dependencies == 'highest'
         run: composer analyse
 
       - name: Run tests

@@ -12,7 +12,7 @@ final class HijriDateTest extends TestCase
         $validator = Validator::make([
             'date' => '1445-09-01',
         ], [
-            'date' => [new HijriDateRule()],
+            'date' => [new HijriDateRule],
         ]);
 
         $this->assertTrue($validator->passes());
@@ -23,7 +23,7 @@ final class HijriDateTest extends TestCase
         $validator = Validator::make([
             'date' => '1445-02-30',
         ], [
-            'date' => [new HijriDateRule()],
+            'date' => [new HijriDateRule],
         ]);
 
         $this->assertTrue($validator->fails());
@@ -34,7 +34,7 @@ final class HijriDateTest extends TestCase
         $validator = Validator::make([
             'date' => '01/09/1445',
         ], [
-            'date' => [new HijriDateRule()],
+            'date' => [new HijriDateRule],
         ]);
 
         $this->assertTrue($validator->fails());
