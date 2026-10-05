@@ -8,6 +8,7 @@ use Illuminate\Support\ServiceProvider;
 use Pharaonic\Hijri\Hijri;
 use Pharaonic\Hijri\HijriCarbon;
 use Pharaonic\Laravel\Hijri\Support\HijriFormatter;
+use Pharaonic\Laravel\Hijri\View\Components\HijriDate;
 
 class HijriServiceProvider extends ServiceProvider
 {
@@ -35,6 +36,8 @@ class HijriServiceProvider extends ServiceProvider
         Blade::directive('hijri', function ($expression) {
             return '<?php echo e(\\'.HijriFormatter::class.'::format('.$expression.')); ?>';
         });
+
+        Blade::component('hijri-date', HijriDate::class);
 
         if ($this->app->runningInConsole()) {
             $this->publishes([

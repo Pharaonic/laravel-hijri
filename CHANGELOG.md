@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file.
 - `HijriDateRule` Laravel validation rule (`Pharaonic\Laravel\Hijri\Rules\HijriDateRule`).
 - English and Arabic validation translations.
 - `@hijri($date, $format = null, $locale = null, $adjustment = null)` Blade directive with a configurable default `pharaonic.hijri.format`.
+- `<x-hijri-date>` Blade component that renders a `<time>` element with the Gregorian `datetime` attribute.
 
 ### Changed
 
