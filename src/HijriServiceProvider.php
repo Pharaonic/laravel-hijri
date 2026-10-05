@@ -15,7 +15,7 @@ class HijriServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(
             __DIR__.'/../config/hijri.php',
-            'hijri'
+            'pharaonic.hijri'
         );
     }
 
@@ -24,12 +24,12 @@ class HijriServiceProvider extends ServiceProvider
         Carbon::mixin(HijriCarbon::class);
 
         Hijri::getInstance()->setHijriAdjustment(
-            (int) $this->app->make('config')->get('hijri.adjustment', -1)
+            (int) $this->app->make('config')->get('pharaonic.hijri.adjustment', -1)
         );
 
         $this->loadTranslationsFrom(
             __DIR__.'/../resources/lang',
-            'hijri'
+            'pharaonic.hijri'
         );
 
         Blade::directive('hijri', function ($expression) {
