@@ -4,9 +4,9 @@ Install the package with Composer. Laravel discovers the service provider automa
 
 ### Requirements
 
-- PHP 8.2, 8.3 or 8.4
-- Laravel 11.x
-- `pharaonic/php-hijri` 8.2.1+ on PHP 8.2, 8.3.1+ on PHP 8.3 or 8.4.1+ on PHP 8.4, with `nesbot/carbon` 2.x or 3.x (both installed automatically). Carbon 3 needs `pharaonic/php-hijri` 8.2.2+, 8.3.2+ or 8.4.2+
+- PHP 8.2, 8.3, 8.4 or 8.5
+- Laravel 12.x
+- `pharaonic/php-hijri` 8.2.2+ on PHP 8.2, 8.3.2+ on PHP 8.3, 8.4.2+ on PHP 8.4 or 8.5.2+ on PHP 8.5, with `nesbot/carbon` 3.x (both installed automatically)
 
 ### Composer Installation
 
