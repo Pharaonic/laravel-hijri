@@ -3,14 +3,14 @@ name: Build
 on:
   push:
     branches:
-      - 12.x
+      - 13.x
     paths-ignore:
       - 'README.md'
       - 'docs/**'
       - '.github/**'
   pull_request:
     branches:
-      - 12.x
+      - 13.x
 
 permissions:
   contents: read
@@ -26,7 +26,6 @@ jobs:
 
       matrix:
         php:
-          - "8.2"
           - "8.3"
           - "8.4"
           - "8.5"
@@ -41,7 +40,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -52,16 +51,16 @@ jobs:
           tools: composer:v2
 
       - name: Install dependencies
-        uses: ramsey/composer-install@v3
+        uses: ramsey/composer-install@v4
         with:
           dependency-versions: ${{ matrix.dependencies }}
 
       - name: Check style
-        if: matrix.os == 'ubuntu-latest' && matrix.php == '8.2' && matrix.dependencies == 'highest'
+        if: matrix.os == 'ubuntu-latest' && matrix.php == '8.3' && matrix.dependencies == 'highest'
         run: composer style
 
       - name: Static analysis
-        if: matrix.os == 'ubuntu-latest' && matrix.php == '8.2' && matrix.dependencies == 'highest'
+        if: matrix.os == 'ubuntu-latest' && matrix.php == '8.3' && matrix.dependencies == 'highest'
         run: composer analyse
 
       - name: Run tests

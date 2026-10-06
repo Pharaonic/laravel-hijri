@@ -24,7 +24,7 @@ Use the branch matching the Laravel version you want to support.
 
 ```text
 10.x → Laravel 10
-12.x → Laravel 12
+11.x → Laravel 11
 12.x → Laravel 12
 13.x → Laravel 13
 ```
@@ -32,8 +32,8 @@ Use the branch matching the Laravel version you want to support.
 Example:
 
 ```bash
-git checkout 12.x
-git pull upstream 12.x
+git checkout 13.x
+git pull upstream 13.x
 ```
 
 Always start your work from the appropriate Laravel version branch.
@@ -104,7 +104,7 @@ The package must also be tested against the Laravel version targeted by the bran
 For example:
 
 ```text
-12.x → Laravel 12
+13.x → Laravel 13
 ```
 
 ## Commit your changes
@@ -117,7 +117,7 @@ Examples:
 Add Hijri date adjustment support
 Fix Hijri cast conversion
 Add configurable Hijri formatter
-Update Laravel 12 compatibility
+Update Laravel 13 compatibility
 Update usage documentation
 ```
 
@@ -145,7 +145,7 @@ Example:
 ```text
 fix/invalid-date-conversion
         ↓
-       12.x
+       13.x
 ```
 
 Do not submit the pull request against another Laravel version branch.
