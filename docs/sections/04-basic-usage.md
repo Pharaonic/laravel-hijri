@@ -55,6 +55,33 @@ $hijri->locale('ar')->isoFormat('dddd D MMMM YYYY'); // "الاثنين 1 رَم
 
 In Blade views, the [`@hijri` directive](#blade-directive) or the [`<x-hijri-date>` component](#blade-component) does this in one step.
 
+### Eloquent Cast
+
+Cast a date column with `AsHijri` to read it as a `Hijri` object. The column keeps its Gregorian value in the database.
+
+```php
+use Pharaonic\Laravel\Hijri\Casts\AsHijri;
+
+class Invoice extends Model
+{
+    protected function casts(): array
+    {
+        return [
+            'due_date' => AsHijri::class,
+        ];
+    }
+}
+
+$invoice->due_date->format('Y-m-d');   // "1445-09-01"
+$invoice->toArray()['due_date'];        // "1445-09-01"
+```
+
+You can assign a Carbon date, a Gregorian date string or a `Hijri` object. All of them are stored as Gregorian dates. The cast uses the global adjustment.
+
+:::tip Date Math
+Changing the returned `Hijri` object doesn't change the model. To change the date, assign a new value. Do the math on a Gregorian date, for example `$invoice->due_date = now()->addMonth()`.
+:::
+
 ### Per-call Adjustment
 
 Pass an adjustment in days to override the global one for a single conversion. It doesn't change the global value.

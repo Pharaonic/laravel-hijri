@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file.
 - English and Arabic validation translations.
 - `@hijri($date, $format = null, $locale = null, $adjustment = null)` Blade directive with a configurable default `pharaonic.hijri.format`.
 - `<x-hijri-date>` Blade component that renders a `<time>` element with the Gregorian `datetime` attribute.
+- `AsHijri` Eloquent cast (`Pharaonic\Laravel\Hijri\Casts\AsHijri`) that reads Gregorian columns as Hijri dates and serializes them as `Y-m-d` Hijri strings.
 
 ### Changed
 
