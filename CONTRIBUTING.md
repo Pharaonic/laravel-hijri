@@ -24,7 +24,7 @@ Use the branch matching the Laravel version you want to support.
 
 ```text
 10.x → Laravel 10
-12.x → Laravel 12
+11.x → Laravel 11
 12.x → Laravel 12
 13.x → Laravel 13
 ```
