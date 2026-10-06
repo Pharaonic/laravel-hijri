@@ -23,7 +23,7 @@ card:
   description: Hijri (Islamic) calendar support for Laravel. Convert any Carbon date to and from Hijri, print it with an @hijri Blade directive, and validate Hijri input in English or Arabic.
 
 seo:
-  title: "{package.name} - Hijri (Islamic) Calendar Package for Laravel"
+  title: "{package.fullName} - Hijri (Islamic) Calendar Package for Laravel"
   description: "{package.name} is a Laravel package for converting Carbon dates to and from the Hijri (Islamic) calendar, with a Blade directive, a validation rule and Arabic month names. {package.downloadsShort}+ downloads, {package.license} licensed."
   keywords: laravel hijri, hijri date, islamic calendar, hijri carbon, gregorian to hijri, hijri to gregorian, laravel islamic date, hijri validation, arabic date
   author: Pharaonic
