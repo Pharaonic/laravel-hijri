@@ -22,13 +22,10 @@ Render `<x-hijri-date :date="$date" />` as a `<time>` element with the Gregorian
 Validate Hijri input such as `1445-09-01` with `HijriDateRule`, with English and Arabic messages.
 
 ### Day Adjustment {icon="switch"}
-Shift every conversion by a number of days to match local moon sighting, globally or per call.
+Shift every conversion to match local moon sighting, globally with `HIJRI_ADJUSTMENT` in `.env` or per call.
 
 ### Arabic & English Names {icon="translate"}
 Month names switch between Arabic (`رَمضان`) and transliterated English (`Ramadan`) by locale.
-
-### Publishable Config {icon="document"}
-One small config file, with the day adjustment readable from `HIJRI_ADJUSTMENT` in `.env`.
 :::
 
 :::info Quick Tip
