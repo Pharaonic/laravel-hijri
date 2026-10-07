@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+### Added
+
+- `AsHijri` Eloquent cast (`Pharaonic\Laravel\Hijri\Casts\AsHijri`) that reads Gregorian columns as Hijri dates and serializes them as `Y-m-d` Hijri strings.
+
 ## 13.0.3 - 2026-10-07
 
 ### Documentation
@@ -22,7 +28,7 @@ All notable changes to this project will be documented in this file.
 - The 29th of Safar no longer renders as the 1st of Rabi' Al-Awwal.
 - Requires `pharaonic/php-hijri` 8.3.3+ or 8.4.3+ or 8.5.3+, which contain these fixes.
 
-## Unreleased
+## 13.0.0 - 2026-10-06
 
 ### Added
 
@@ -32,7 +38,6 @@ All notable changes to this project will be documented in this file.
 - English and Arabic validation translations.
 - `@hijri($date, $format = null, $locale = null, $adjustment = null)` Blade directive with a configurable default `pharaonic.hijri.format`.
 - `<x-hijri-date>` Blade component that renders a `<time>` element with the Gregorian `datetime` attribute.
-- `AsHijri` Eloquent cast (`Pharaonic\Laravel\Hijri\Casts\AsHijri`) that reads Gregorian columns as Hijri dates and serializes them as `Y-m-d` Hijri strings.
 
 ### Changed
 
