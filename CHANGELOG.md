@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## 9.0.3 - Unreleased
+
+### Documentation
+
+- The installation requirements now list the `pharaonic/php-hijri` releases `composer.json` requires: 8.0.4+ on PHP 8.0, 8.1.3+ on PHP 8.1 or 8.2.4+ on PHP 8.2. Before, they listed older releases.
+- The changelog lists the 9.0.0 notes under 9.0.0 instead of `Unreleased`.
+
 ## 9.0.2 - 2026-10-07
 
 ### Fixed
@@ -20,7 +27,7 @@ All notable changes to this project will be documented in this file.
 - The 29th of Safar no longer renders as the 1st of Rabi' Al-Awwal.
 - Requires `pharaonic/php-hijri` 8.0.3+ or 8.1.2+ or 8.2.3+, which contain these fixes.
 
-## Unreleased
+## 9.0.0 - 2026-10-06
 
 ### Added
 
