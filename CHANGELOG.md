@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 13.0.2 - Unreleased
+
+### Fixed
+
+- `HijriDateRule` now accepts and rejects the 30th of Dhu Al-Hijjah by the same leap years `@hijri` uses. Before, it rejected dates such as `1425-12-30`, which `@hijri` renders, and accepted `1426-12-30`, which doesn't exist. Requires `pharaonic/php-hijri` 8.3.4+ or 8.4.4+ or 8.5.4+, which fix the leap years.
+
 ## 13.0.1 - 2026-10-07
 
 ### Fixed
