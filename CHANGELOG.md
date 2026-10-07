@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## 8.0.2 - Unreleased
+
+### Fixed
+
+- `HijriDateRule` now accepts and rejects the 30th of Dhu Al-Hijjah by the same leap years `@hijri` uses. Before, it rejected dates such as `1425-12-30`, which `@hijri` renders, and accepted `1426-12-30`, which doesn't exist. Requires `pharaonic/php-hijri` 8.0.4+ or 8.1.3+, which fix the leap years.
+
+### Changed
+
+- Development: `laravel/pint` is bounded to `~1.5.0`, the range CI checks style with, so `composer style` gives the same result on every PHP version.
+
 ## 8.0.1 - 2026-10-07
 
 ### Fixed
