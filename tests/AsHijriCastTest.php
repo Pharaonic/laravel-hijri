@@ -48,6 +48,22 @@ final class AsHijriCastTest extends TestCase
         $this->assertSame('2024-03-11 14:30:00', $invoice->getAttributes()['due_date']);
     }
 
+    public function test_it_keeps_the_date_of_a_hijri_value_with_a_per_call_adjustment(): void
+    {
+        $invoice = new Invoice(['due_date' => Hijri::fromGregorian('2024-03-11 14:30:00', null, 1)]);
+
+        $this->assertSame('2024-03-11 14:30:00', $invoice->getAttributes()['due_date']);
+    }
+
+    public function test_it_stores_a_changed_hijri_value_as_its_new_date(): void
+    {
+        $dueDate = Hijri::fromGregorian('2024-03-11 00:00:00')->setTime(9, 15);
+
+        $invoice = new Invoice(['due_date' => $dueDate]);
+
+        $this->assertSame('2024-03-11 09:15:00', $invoice->getAttributes()['due_date']);
+    }
+
     public function test_it_serializes_as_a_hijri_date_string(): void
     {
         $invoice = $this->loadedInvoice('2024-03-11 00:00:00');

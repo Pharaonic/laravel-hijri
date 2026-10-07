@@ -49,8 +49,7 @@ final class AsHijri implements CastsAttributes, SerializesCastableAttributes
         // Hijri extends Carbon, so its date parts hold the Hijri values and
         // must be converted back before they are treated as a Gregorian date.
         if ($value instanceof Hijri) {
-            $value = Hijri::fromHijri($value->year, $value->month, $value->day, $value->getTimezone())
-                ->setTime($value->hour, $value->minute, $value->second, $value->microsecond);
+            $value = $value->toGregorian();
         }
 
         return $model->fromDateTime($value);
