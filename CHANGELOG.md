@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## 11.0.1 - Unreleased
+
+### Fixed
+
+- Rendering a Hijri date (`@hijri`, `<x-hijri-date>`) no longer changes Gregorian month names elsewhere in the app. Before, after the first Hijri date in a request, every Gregorian date printed with month names (`translatedFormat('F')`, `isoFormat('MMMM')`, `monthName`) showed Hijri names, e.g. `Rabi' Al-Awwal` instead of `March`, for the rest of the process (every request under Octane, every job on a queue worker).
+- The 29th of Safar no longer renders as the 1st of Rabi' Al-Awwal.
+- Requires `pharaonic/php-hijri` 8.2.3+ or 8.3.3+ or 8.4.3+, which contain these fixes.
+
 ## Unreleased
 
 ### Added
