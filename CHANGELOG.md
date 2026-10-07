@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file.
 
+## 13.0.3 - 2026-10-07
+
+### Documentation
+
+- The overview now lists six features: the publishable config is part of Day Adjustment, since `HIJRI_ADJUSTMENT` is the only setting it holds.
+
+## 13.0.2 - 2026-10-07
+
+### Fixed
+
+- `HijriDateRule` now accepts and rejects the 30th of Dhu Al-Hijjah by the same leap years `@hijri` uses. Before, it rejected dates such as `1425-12-30`, which `@hijri` renders, and accepted `1426-12-30`, which doesn't exist. Requires `pharaonic/php-hijri` 8.3.4+ or 8.4.4+ or 8.5.4+, which fix the leap years.
+
+## 13.0.1 - 2026-10-07
+
+### Fixed
+
+- Rendering a Hijri date (`@hijri`, `<x-hijri-date>`) no longer changes Gregorian month names elsewhere in the app. Before, after the first Hijri date in a request, every Gregorian date printed with month names (`translatedFormat('F')`, `isoFormat('MMMM')`, `monthName`) showed Hijri names, e.g. `Rabi' Al-Awwal` instead of `March`, for the rest of the process (every request under Octane, every job on a queue worker).
+- The 29th of Safar no longer renders as the 1st of Rabi' Al-Awwal.
+- Requires `pharaonic/php-hijri` 8.3.3+ or 8.4.3+ or 8.5.3+, which contain these fixes.
+
 ## Unreleased
 
 ### Added
