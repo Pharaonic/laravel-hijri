@@ -31,7 +31,7 @@
         "illuminate/contracts": "^12.0",
         "illuminate/support": "^12.0",
         "illuminate/view": "^12.0",
-        "pharaonic/php-hijri": "~8.2.3 || ~8.3.3 || ~8.4.3 || ~8.5.3"
+        "pharaonic/php-hijri": "~8.2.4 || ~8.3.4 || ~8.4.4 || ~8.5.4"
     },
     "require-dev": {
         "laravel/pint": "^1.21",
