@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## 7.0.4 - Unreleased
+
+### Documentation
+
+- The installation requirements now list the `pharaonic/php-hijri` releases `composer.json` requires: 8.0.4+. Before, they listed older releases.
+- The changelog lists the 7.0.0 notes under 7.0.0 instead of `Unreleased`, and adds the missing 7.0.1 notes.
+
 ## 7.0.3 - 2026-10-07
 
 ### Fixed
@@ -16,7 +23,13 @@ All notable changes to this project will be documented in this file.
 - The 29th of Safar no longer renders as the 1st of Rabi' Al-Awwal.
 - Requires `pharaonic/php-hijri` 8.0.3+, which contain these fixes.
 
-## Unreleased
+## 7.0.1 - 2026-10-06
+
+### Fixed
+
+- Requires `pharaonic/php-hijri` 8.0.2+ (was 8.0.1+), which requires `nesbot/carbon` ^2.55. Older Carbon releases render Gregorian month names (e.g. `September`) in Hijri dates.
+
+## 7.0.0 - 2026-10-05
 
 ### Added
 
