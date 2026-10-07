@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 13.0.3 - 2026-10-07
+
+### Documentation
+
+- The overview now lists six features: the publishable config is part of Day Adjustment, since `HIJRI_ADJUSTMENT` is the only setting it holds.
+
 ## 13.0.2 - 2026-10-07
 
 ### Fixed
