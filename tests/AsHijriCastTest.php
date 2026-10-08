@@ -41,6 +41,20 @@ final class AsHijriCastTest extends TestCase
         $this->assertSame('2024-03-11 00:00:00', $invoice->getAttributes()['due_date']);
     }
 
+    public function test_it_reads_every_string_as_gregorian(): void
+    {
+        $invoice = new Invoice(['due_date' => '1445-09-01']);
+
+        $this->assertSame('1445-09-01 00:00:00', $invoice->getAttributes()['due_date']);
+    }
+
+    public function test_it_stores_a_hijri_string_parsed_with_parse_hijri(): void
+    {
+        $invoice = new Invoice(['due_date' => Carbon::parseHijri('1445-09-01')]);
+
+        $this->assertSame('2024-03-11 00:00:00', $invoice->getAttributes()['due_date']);
+    }
+
     public function test_it_converts_a_hijri_value_back_to_gregorian(): void
     {
         $invoice = new Invoice(['due_date' => Hijri::fromGregorian('2024-03-11 14:30:00')]);

@@ -78,6 +78,14 @@ $invoice->toArray()['due_date'];        // "1445-09-01"
 
 You can assign a Carbon date, a Gregorian date string or a `Hijri` object. All of them are stored as Gregorian dates. The cast uses the global adjustment.
 
+:::warning Hijri Strings
+A string is always read as a Gregorian date, even though the cast outputs Hijri strings. Assigning `'1445-09-01'` stores the year 1445 AD. Convert Hijri input, such as a value checked with [`HijriDateRule`](#validation), with `Carbon::parseHijri()` first:
+
+```php
+$invoice->due_date = Carbon::parseHijri($request->due_date); // "1445-09-01" → 2024-03-11
+```
+:::
+
 :::tip Date Math
 Changing the returned `Hijri` object doesn't change the model. To change the date, assign the result back, for example `$invoice->due_date = $invoice->due_date->addMonth()`, which adds one Hijri month.
 :::
