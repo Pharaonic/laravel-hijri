@@ -6,7 +6,7 @@ Install the package with Composer. Laravel discovers the service provider automa
 
 - PHP 8.0
 - Laravel 6.20 or newer within 6.x
-- `pharaonic/php-hijri` 8.0.2+, with `nesbot/carbon` ^2.55 (both installed automatically)
+- `pharaonic/php-hijri` 8.0.4+, with `nesbot/carbon` ^2.55 (both installed automatically)
 
 ### Composer Installation
 
