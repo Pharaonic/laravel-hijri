@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## 13.1.0 - Unreleased
+
+### Added
+
+- `AsHijri` Eloquent cast (`Pharaonic\Laravel\Hijri\Casts\AsHijri`) that reads Gregorian columns as Hijri dates and serializes them as `Y-m-d` Hijri strings.
+
+### Changed
+
+- Requires `pharaonic/php-hijri` 8.3.6+ or 8.4.6+ or 8.5.6+, which add `Hijri::toGregorian()` and Hijri date math. `AsHijri` uses `toGregorian()` to store `Hijri` values, so values made with a per-call adjustment or changed with `addMonth()` keep their date.
+
 ## 13.0.4 - Unreleased
 
 ### Documentation
