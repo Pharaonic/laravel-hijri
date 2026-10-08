@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## 10.0.4 - Unreleased
+## 10.0.4 - 2026-10-08
 
 ### Documentation
 
