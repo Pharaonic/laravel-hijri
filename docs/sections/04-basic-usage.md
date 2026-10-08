@@ -79,7 +79,11 @@ $invoice->toArray()['due_date'];        // "1445-09-01"
 You can assign a Carbon date, a Gregorian date string or a `Hijri` object. All of them are stored as Gregorian dates. The cast uses the global adjustment.
 
 :::tip Date Math
-Changing the returned `Hijri` object doesn't change the model. To change the date, assign a new value. Do the math on a Gregorian date, for example `$invoice->due_date = now()->addMonth()`.
+Changing the returned `Hijri` object doesn't change the model. To change the date, assign the result back, for example `$invoice->due_date = $invoice->due_date->addMonth()`, which adds one Hijri month.
+:::
+
+:::warning Queries
+A `Hijri` object formats as a Hijri date, so pass its Gregorian date to queries: `Invoice::where('due_date', $date->toGregorian())`.
 :::
 
 ### Per-call Adjustment

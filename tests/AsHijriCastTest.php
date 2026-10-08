@@ -64,6 +64,17 @@ final class AsHijriCastTest extends TestCase
         $this->assertSame('2024-03-11 09:15:00', $invoice->getAttributes()['due_date']);
     }
 
+    public function test_it_stores_a_read_value_after_hijri_date_math(): void
+    {
+        $invoice = $this->loadedInvoice('2024-03-20 10:00:00');
+
+        $invoice->due_date = $invoice->due_date?->addMonth();
+        $this->assertSame('2024-04-19 10:00:00', $invoice->getAttributes()['due_date']);
+
+        $invoice->due_date = $invoice->due_date?->startOfMonth();
+        $this->assertSame('2024-04-10 00:00:00', $invoice->getAttributes()['due_date']);
+    }
+
     public function test_it_serializes_as_a_hijri_date_string(): void
     {
         $invoice = $this->loadedInvoice('2024-03-11 00:00:00');

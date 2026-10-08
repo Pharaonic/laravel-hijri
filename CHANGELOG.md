@@ -10,7 +10,7 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
-- Requires `pharaonic/php-hijri` 8.3.5+ or 8.4.5+ or 8.5.5+, which add `Hijri::toGregorian()`. `AsHijri` uses it to store `Hijri` values, so values made with a per-call adjustment keep their date.
+- Requires `pharaonic/php-hijri` 8.3.6+ or 8.4.6+ or 8.5.6+, which add `Hijri::toGregorian()` and Hijri date math. `AsHijri` uses `toGregorian()` to store `Hijri` values, so values made with a per-call adjustment or changed with `addMonth()` keep their date.
 
 ## 13.0.3 - 2026-10-07
 
