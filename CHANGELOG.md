@@ -2,11 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
-## 13.0.4 - Unreleased
+## 13.1.0 - 2026-10-08
+
+### Added
+
+- `AsHijri` Eloquent cast (`Pharaonic\Laravel\Hijri\Casts\AsHijri`) that reads Gregorian columns as Hijri dates and serializes them as `Y-m-d` Hijri strings.
+
+### Changed
+
+- Requires `pharaonic/php-hijri` 8.3.6+ or 8.4.6+ or 8.5.6+, which add `Hijri::toGregorian()` and Hijri date math. `AsHijri` uses `toGregorian()` to store `Hijri` values, so values made with a per-call adjustment or changed with `addMonth()` keep their date.
 
 ### Documentation
 
-- The installation requirements now list the `pharaonic/php-hijri` releases `composer.json` requires: 8.3.4+ on PHP 8.3, 8.4.4+ on PHP 8.4 or 8.5.4+ on PHP 8.5. Before, they listed older releases.
+- The installation requirements now list the `pharaonic/php-hijri` releases `composer.json` requires. Before, they listed older releases.
 - The changelog lists the 13.0.0 notes under 13.0.0 instead of `Unreleased`.
 
 ## 13.0.3 - 2026-10-07
